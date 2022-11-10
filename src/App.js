@@ -11,7 +11,7 @@ function App() {
   const num = [3, 5, 4, 7, 8, 49];
   // met behulp van `map`, bereken het kwadraat van bovenstaande nummers en zet die in een div
   const kwadraatArray = num.map((arrayNum) => <div>{arrayNum * arrayNum}</div>);
-  console.log(kwadraatArray);
+  // console.log(kwadraatArray);
 
   // opdracht 3
   const cijfers = [4, 5, 6, 4, 6, 7, 1, 8];
@@ -50,7 +50,12 @@ function App() {
   const filteredStudents = studenten.filter((studenten) => {
     return studenten.cijfer >= 6
   }).map((studenten) => {
-    return <div>{studenten.naam}</div>
+    return (
+    <div>
+    <div>naam: {studenten.naam}</div>
+    <div>cijfer: {studenten.cijfer}</div>
+    </div>
+    )
   })
 
   //How to write this, using an arrow function?
